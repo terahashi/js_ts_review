@@ -13,9 +13,10 @@ document.querySelector('#app').innerHTML = `
       <h4 style="margin-bottom: 10px;">✅問題1：配列の最大値</h4>
       <p style="margin-bottom: 10px;">
         下記の配列から最大値を求めてください。
+        ※ Math.max()は使わずにやってみましょう。
       </p>
       <p style="margin-bottom: 10px;">
-        const numbers = [3, 7, 2, 9, 1];
+        const numbers = [12, 5, 23, 8, 17];
       </p>
         <button data-file="./js/array.js">コンソールで実行</button>
       </div>
