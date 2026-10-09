@@ -296,6 +296,9 @@ code {
   }
 }
 
+.question {
+  margin-bottom: 60px;
+}
 .question button {
   margin-top: 10px;
 }
