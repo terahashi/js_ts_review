@@ -76,7 +76,8 @@ document.querySelector('#app').innerHTML = `
       <div class="question">
       <h4 style="margin-bottom: 10px;">✅問題1</h4>
       <p style="margin-bottom: 10px;">
-        次の変数に「適切な型」を定義してください。
+       1:typeで型定義を作成してください。<br>
+       2:次の変数の「???の箇所」に型を定義してください。<br>
       </p>
       <p style="margin-bottom: 10px;">
         const product: ??? = {
@@ -86,6 +87,8 @@ document.querySelector('#app').innerHTML = `
         };
       </p>
         <button data-file="./ts/01_type.ts">コンソールで実行</button>
+        <p>‼️yarn tsc --noEmit で型定義が正しいか確認。</p>
+        <p>‼️型定義のチェックは実際のファイルを参照する ➡️ ts/01_type.ts</p>
       </div>
     </div>
 
