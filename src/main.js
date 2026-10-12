@@ -62,6 +62,7 @@ document.querySelector('#app').innerHTML = `
       mapメソッドを使って、配列の中の数値を全て2倍にしてください。<br>
       const numbers = [1, 2, 3, 4, 5];
       </p>
+      <button data-file="./js/04_map.js">コンソールで実行</button>
       </div>
 
     </div>
@@ -75,10 +76,14 @@ document.querySelector('#app').innerHTML = `
       <div class="question">
       <h4 style="margin-bottom: 10px;">✅問題1</h4>
       <p style="margin-bottom: 10px;">
-        下記の型定義を完成させてください。
+        次の変数に「適切な型」を定義してください。
       </p>
       <p style="margin-bottom: 10px;">
-       下記ss
+        const product: ??? = {
+          name: "Apple",
+          price: 150,
+          inStock: true,
+        };
       </p>
         <button data-file="./ts/01_type.ts">コンソールで実行</button>
       </div>
