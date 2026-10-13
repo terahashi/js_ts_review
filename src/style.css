@@ -296,10 +296,37 @@ code {
   }
 }
 
+.center-area {
+  margin: 0 auto 80px;
+  padding: 100px;
+}
+
 .question {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 .question button {
   margin-top: 10px;
   margin-bottom: 20px;
+}
+
+.question .textbox {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+code {
+  background: none;
+}
+.code-block {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  border-radius: 8px;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.code-block code {
+  font-family: monospace;
+  white-space: pre;
 }
