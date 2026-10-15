@@ -110,6 +110,7 @@ const task: ??? = {
 };</code></pre>
 
       <button data-file="./ts/02_interface.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
       </div>
 
 
@@ -136,8 +137,109 @@ const task: ??? = {
 console.log(calculateTotal(150, 3)); //結果は450</code></pre>
 
       <button data-file="./ts/02_interface.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
       </div>
     </div>
+
+
+
+
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題4</h4>
+       <p class="textbox">
+      次のコードを完成させてください。
+      </p>
+
+<pre class="code-block"><code>type Goods = {
+  name: ???;
+  price: ???;
+};
+
+const product: Goods = {
+  name: "Apple",
+  price: 150,
+};
+
+function getProductName(product: ???): ??? {
+  return product.name;
+}
+
+console.log(getProductName(product));
+// Apple</code></pre>
+
+      <button data-file="./ts/04_object_function.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題5</h4>
+       <p class="textbox">
+       ・配列の型定義<br>
+      次のコードを完成させてください。
+      </p>
+
+<pre class="code-block"><code>const prices: ??? = [150, 200, 300];
+
+function calculateTotal(prices: ???): number {
+  return prices.reduce((total, price) => total + price, 0);
+}
+
+console.log(calculateTotal(prices));
+// 650</code></pre>
+
+      <button data-file="./ts/05_array.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
+      </div>
+    </div>
+
+
+
+
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題6</h4>
+       <p class="textbox">
+       ・interfaceと配列の組み合わせ<br>
+      次のコードを完成させてください。
+      </p>
+
+<pre class="code-block"><code>interface Goods {
+  name: ???;
+  price: ???;
+}
+
+const products: ??? = [
+  { name: "Apple", price: 150 },
+  { name: "Banana", price: 100 },
+  { name: "Orange", price: 120 },
+];
+
+function getProductNames(products: ???): ??? {
+  return products.map((product) => product);
+}
+
+console.log(getProductNames(products));
+// 表示結果が[{ name: 'Apple', price: 150 }, { name: 'Banana', price: 100 }, { name: 'Orange', price: 120 }]</code></pre>
+
+      <button data-file="./ts/06_interface_array.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
+      </div>
+    </div>
+
+
+
+
+
+
 
     </section>
 `;
