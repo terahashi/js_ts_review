@@ -61,6 +61,44 @@ const keyword = "a";</code></pre>
       <button data-file="./js/04_map.js">コンソールで実行</button>
       </div>
 
+
+
+ <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題5</h4>
+       <p class="textbox">
+      filter() を使って、次の結果になるようにしてください。<br>
+      コンソール結果➡️[100, 150, 200]
+      </p>
+      <pre class="code-block"><code>const prices = [50, 100, 150, 80, 200];
+// ここにコードを書く</code></pre>
+      <button data-file="./js/05_filter03.js">コンソールで実行</button>
+      </div>
+
+
+
+
+ <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題6</h4>
+       <p class="textbox">
+     問題： 次の配列から、在庫がある商品だけを取り出し、商品名だけの配列を作ってコンソールに表示してください。<br>
+      </p>
+      <pre class="code-block"><code>export function run() {
+  const products = [
+    { name: 'Apple', inStock: true },
+    { name: 'Banana', inStock: false },
+    { name: 'Orange', inStock: true },
+    { name: 'Grape', inStock: false },
+  ];
+
+  // ここにコードを書いてください
+}</code></pre>
+      <button data-file="./js/06_filter_map.js">コンソールで実行</button>
+      </div>
+
+
+
+
+
     </div>
 
 
