@@ -282,32 +282,35 @@ console.log(getProductNames(products));
     </section>
 `;
 
-// Viteに読み込み対象のファイルを認識させる
+//■Viteに読み込み対象のファイルを認識させる
 const modules = {
   ...import.meta.glob('./js/*.js'),
-
   ...import.meta.glob('./ts/*.ts'),
+  //import.meta は、現在のモジュール(今回だったらmain.js)に関する情報を取得する。
+  //glob()は「正確にいえばViteの機能。」指定したパターンに一致するファイルを「まとめて読み込み対象にするVite独自の機能です。」
 };
 
-//⬇︎全てのリンクを取得してクリックイベントを登録する
+//■import.metaは「現在のモジュール（今回なら main.js）に関するメタデータを提供するオブジェクト。」
+//モジュールのURLなど、モジュールに関する情報にアクセスできます。
+//例えば、import.meta.url で現在のモジュールのURLを取得できます。
+console.log(import.meta.url);
+
+//■全てのリンクを取得してクリックイベントを登録する
 document.querySelectorAll('[data-file]').forEach((link) => {
-  //⬆︎HTMLの中から data-file が付いている要素を全部探す
+  //⬆HTMLの中から data-file が付いている要素を全部探す
 
   link.addEventListener('click', async (e) => {
     e.preventDefault();
 
-    const file = link.dataset.file;
-
-    const loadModule = modules[file];
+    const filepath = link.dataset.file;
+    const loadModule = modules[filepath];
 
     if (!loadModule) {
-      console.error(`読み込み対象のファイルが見つかりません: ${file}`);
-
+      console.error(`読み込み対象のファイルが見つかりません: ${filepath}`);
       return;
     }
 
     const module = await loadModule();
-
     module.run();
   });
 });
