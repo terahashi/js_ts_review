@@ -282,14 +282,31 @@ console.log(getProductNames(products));
     </section>
 `;
 
+// Viteに読み込み対象のファイルを認識させる
+const modules = {
+  ...import.meta.glob('./js/*.js'),
+
+  ...import.meta.glob('./ts/*.ts'),
+};
+
 //⬇︎全てのリンクを取得してクリックイベントを登録する
 document.querySelectorAll('[data-file]').forEach((link) => {
   //⬆︎HTMLの中から data-file が付いている要素を全部探す
+
   link.addEventListener('click', async (e) => {
     e.preventDefault();
 
     const file = link.dataset.file;
-    const module = await import(file);
+
+    const loadModule = modules[file];
+
+    if (!loadModule) {
+      console.error(`読み込み対象のファイルが見つかりません: ${file}`);
+
+      return;
+    }
+
+    const module = await loadModule();
 
     module.run();
   });
