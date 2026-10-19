@@ -99,6 +99,84 @@ const keyword = "a";</code></pre>
 
 
 
+
+
+ <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題7</h4>
+       <p class="textbox">
+      次の配列にある商品の価格をすべて合計し、コンソールに表示してください。<br>
+      </p>
+      <pre class="code-block"><code>export function run() {
+  const prices = [150, 200, 300, 100];
+
+  // ここにコードを書いてください
+
+}, 0);
+
+console.log(result);
+}</code></pre>
+      <button data-file="./js/07_reduce.js">コンソールで実行</button>
+      </div>
+
+
+
+
+
+
+ <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題8</h4>
+       <p class="textbox">
+      reduce応用問題。(fillterとmapでも解答可能です)<br>
+      ・応用例:データのフィルタリングと変換<br>
+①特定の条件（ここでは価格が1000円以上の商品）を満たす商品を抽出し、<br>
+②抽出された商品に対して税込み価格（10%を加算）を計算します。<br>
+③最終的に「新しい配列」を作成し【抽出した商品】をコンソールに表示してください。<br>
+      </p>
+      <pre class="code-block"><code>const products = [
+    { name: 'コーヒーメーカー', category: '家電', price: 3000 },
+    { name: 'スニーカー', category: 'ファッション', price: 8000 },
+    { name: 'ノートブック', category: '文房具', price: 500 },
+    { name: 'タブレット', category: '家電', price: 40000 },
+    { name: 'Tシャツ', category: 'ファッション', price: 1500 },
+];
+
+//⬇︎コンソール結果の解答
+console.log(result);
+[
+  {
+    name: 'コーヒーメーカー',
+    category: '家電',
+    price: 3000,
+    priceWithTax: 3300,
+  },
+  {
+    name: 'スニーカー',
+    category: 'ファッション',
+    price: 8000,
+    priceWithTax: 8800
+  },
+  {
+    name: 'タブレット',
+    category: '家電',
+    price: 40000,
+    priceWithTax: 44000,
+  },
+  {
+    name: 'Tシャツ',
+    category: 'ファッション',
+    price: 1500,
+    priceWithTax: 1650
+  }
+]
+
+}</code></pre>
+      <button data-file="./js/08_reducer02.js">コンソールで実行</button>
+      </div>
+
+
+
+
+
     </div>
 
 
