@@ -357,6 +357,42 @@ console.log(getProductNames(products));
 
 
 
+
+
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題7</h4>
+       <p class="textbox">
+       ・ジェネリクスを使って「渡された値をそのまま返す関数identity」を作成してください。<br>
+      ※ジェネリクスは「引数の型と、戻り値の型などの関係を保ちながら」さまざまな型に対応できるようにする仕組み。
+      </p>
+
+<pre class="code-block"><code>
+//ジェネリクスを使った関数の定義
+function identity ??? (value: ???): ??? {
+ return value;
+}
+
+//ここにコード
+
+console.log(fruit); // "Apple"
+console.log(price); // 150
+
+</code></pre>
+
+      <button data-file="./ts/07_generics_basic.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
     </section>
 `;
 
