@@ -393,6 +393,76 @@ console.log(price); // 150
 
 
 
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題8</h4>
+       <p class="textbox">「配列の最初の要素を取得する関数」を作成してください。<br><br>
+要件<br>
+1. ジェネリクス <T> を使用する。<br>
+2. 引数 items は型 T[] とする。<br>
+3. 戻り値の型は T | undefined とする。<br>
+4. ‼️配列の最初の要素を返す。<br>
+5. 元の配列を変更しない。<br>
+6. 文字列の配列と数値の配列の両方で使用できること。<br>
+</p>
+<pre class="code-block"><code>export function run() {
+function getFirst???(items: ???): ??? | ??? {
+  // ここに処理を書く
+
+}
+console.log(getFirst ??? (['Apple', 'Orange'])); // コンソール結果"Apple"
+console.log(getFirst ??? ([100, 200, 300])); // コンソール結果100
+console.log(getFirst ??? ([])); // コンソール結果undefined
+}
+</code></pre>
+
+      <button data-file="./ts/08_generics02.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題9</h4>
+       <p class="textbox">2つの値を配列にまとめる関数を作成してください。<br><br>
+要件<br>
+1. ジェネリクス <T> を使用する。<br>
+2. 引数 first と second は、どちらも型 T とする。<br>
+3. 戻り値の型は T[] とする。<br>
+4. ‼️受け取った2つの値を配列にして返す。<br>
+5. 文字列と数値の両方で使用できること。<br>
+</p>
+<pre class="code-block"><code>function makeArray ??? (first:  ??? , second:  ??? ,): ??? {
+  // ここに処理を書く
+}
+
+console.log(makeArray ??? ('Apple', 'Orange')); // コンソール結果は配列['Apple', 'Orange']
+console.log(makeArray ??? (10, 20)); // コンソール結果は配列[10, 20]
+</code></pre>
+
+      <button data-file="./ts/09_generics03.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
     </section>
 `;
 
