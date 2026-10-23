@@ -461,6 +461,103 @@ console.log(makeArray ??? (10, 20)); // コンソール結果は配列[10, 20]
 
 
 
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題10</h4>
+       <p class="textbox">「ユーザー情報の型、UserData」を定義し、別ファイルからその型を利用してください。<br>
+       ■要件<br>
+① types/userData.ts<br>
+* UserData 型を定義する。<br>
+* id は number 型。<br>
+* name は string 型。<br>
+* email は string 型。<br>
+* 別のファイルから利用できるようにする。<br><br>
+
+② api/userApi.ts<br>
+* types/userData.ts から UserData 型をインポートする。<br>
+* createUserData() 関数を作成する。<br>
+* UserData 型のオブジェクトを返す。<br>
+* 今回は実際のAPI通信を行わず、オブジェクトを直接返す。<br><br>
+
+③ 10_api_basic.ts<br>
+* api/userApi.ts から createUserData() 関数をインポートする。<br>
+* 関数を実行して、返されたユーザー情報を変数に格納する。<br>
+* ユーザーの名前とメールアドレスをコンソールに出力する。<br><br>
+
+</p>
+<pre class="code-block"><code>src/ts/
+├── types/
+│   └── userData.ts
+│
+├── api/
+│   └── userApi.ts
+│
+└── 10_api_basic.ts
+</code></pre>
+
+
+<pre class="code-block"><code>
+//①types/userData.ts
+
+//■ユーザー情報の型、「type UserData」を定義する。
+
+??? type UserData = {
+  id: ???;
+  name: ???;
+  email: ???;
+
+};
+</code></pre>
+
+
+<pre class="code-block"><code>
+//②api/userApi.ts
+//types/userData.tsから「UserData型」をインポート。
+
+import ???
+
+// ■「createUserData()関数」を作成し、UserData型のオブジェクトを返してください。
+//‼️➡️今回は実際のAPI通信は行わず、「下記のオブジェクト({}の部分)」を直接返すものとします。
+
+??? function createUserData(): ??? {
+  return {
+    id: 1,
+    name: 'Apple',
+    email: 'apple@example.com',
+  };
+}
+</code></pre>
+
+
+<pre class="code-block"><code>
+//ts/10_api_basic.ts
+//api/userApi.tsからcreateUserData()関数をインポート
+
+import { createUserData } from './api/userApi.js';
+
+export function run() {
+  //関数を実行して、ユーザー情報を取得
+  const userData = createUserData();
+
+  console.log(userData.id);
+  console.log(userData.name);
+  console.log(userData.email);
+}
+
+}
+
+</code></pre>
+
+      <button data-file="./ts/10_api_basic.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
 
 
     </section>
