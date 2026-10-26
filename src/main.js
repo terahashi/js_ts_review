@@ -560,6 +560,87 @@ export function run() {
 
 
 
+
+
+
+
+
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題11</h4>
+       <p class="textbox">「ユーザー情報の型、UserData」を定義し、別ファイルからその型を利用してください。<br>
+       ■要件<br>
+・今回は実際のAPI通信を行います。「jsonplaceholder」のAPIを利用します。
+
+</p>
+<pre class="code-block"><code>src/ts/
+├── types/
+│   └── userData.ts
+│
+├── api/
+│   └── userApi_02.ts
+│
+└── 11_api02.ts
+</code></pre>
+
+
+<pre class="code-block"><code>
+//①types/userData.ts
+//■ユーザー情報の型、「type UserData」を定義する。
+
+export type UserData = {
+  id: number;
+  name: string;
+  email: string;
+};
+</code></pre>
+
+
+
+
+<pre class="code-block"><code>
+//②api/userApi_02.ts
+//JSONPlaceholderのAPIを利用する
+
+</code></pre>
+
+
+
+<pre class="code-block"><code>
+//③ts/11_api02.ts
+//api/userApi_02.tsからcreateUserData()関数をインポート
+
+import { createUserData } from './api/userApi_02.js';
+
+export async function run() {
+  //関数を実行して、ユーザー情報を取得
+  const userData = await createUserData();//
+
+  console.log(userData.id);
+  console.log(userData.name);
+  console.log(userData.email);
+}
+
+</code></pre>
+
+      <button data-file="./ts/11_api02.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </section>
 `;
 
