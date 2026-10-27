@@ -641,6 +641,99 @@ export async function run() {
 
 
 
+
+
+
+
+
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題12</h4>
+       <p class="textbox">次のコードの ??? を埋めてください。<br><br>
+       ■要件<br>
+・今回はユニオン型。<br>
+問1. ??? に入る型を書いてください。<br>
+問2. なぜ formatId(123) と formatId('abc') の両方が実行できる？<br>
+✅問2の回答:ユニオン型は、複数の型を指定することが可能。
+
+</p>
+<pre class="code-block"><code>
+function formatId(id: ???): string {
+  return \`ID: \${id}\`;
+  //外側のテンプレートリテラルの中にそのまま書くと、
+  //JavaScriptは内側のテンプレートリテラルを見て【‼️外側のテンプレートリテラルが途中で終わったと解釈してしまう。】
+  //そこで、上記のようにバックスラッシュ \ を付けます。解決
+}
+
+console.log(formatId(123));
+console.log(formatId('abc'));
+</code></pre>
+
+
+      <button data-file="./ts/12_union.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題13</h4>
+       <p class="textbox">as const の基本<br><br>
+       ■要件<br>
+       次のコードを見て、問題に回答してください。<br>
+
+</p>
+<pre class="code-block"><code>
+const user = {
+  name: 'Apple',
+  age: 20,
+} as const;
+
+
+////問1：user.name の型は？
+A: 'Apple'
+as const を付けることで、user.name は一般的なstring型ではなく、
+具体的な文字列である【'Apple'というリテラル型になります。】
+
+
+////問2：次のコードはエラーになるか？
+user.name = 'Banana';
+A: エラーになります。user.name は「readonlyとして扱われるため、値を変更できません。」
+
+
+////問3：as const を付けることで、何が変わるのか？
+A:「as const」を付けると、値が"具体的なリテラル型"として扱われ【配列やオブジェクトの要素・プロパティを変更できなくなります。】
+
+
+
+</code></pre>
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </section>
 `;
 
