@@ -177,7 +177,50 @@ console.log(result);
 
 
 
+
+
+
+ <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題9</h4>
+       <p class="textbox">次の商品配列から、価格が1000円以上である最初の商品を1つだけ取り出して、コンソールに表示してください。<br><br>
+
+       ■要件<br>
+       ・find()メソッドを使う。<br>
+     </p>
+      <pre class="code-block"><code>export function run() {
+  const products = [
+    { name: 'ノート', price: 300 },
+    { name: 'ペン', price: 150 },
+    { name: 'スニーカー', price: 8000 },
+    { name: 'タブレット', price: 40000 },
+    { name: 'Tシャツ', price: 1500 },
+  ];
+
+  // ここにコードを書いてください
+
+  console.log(result);
+}</code></pre>
+      <button data-file="./js/09_find.js">コンソールで実行</button>
+      </div>
+
+
+
+
+
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -718,6 +761,74 @@ A:「as const」を付けると、値が"具体的なリテラル型"として�
 
 </code></pre>
 
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <div class="question">
+      <h4 style="margin-bottom: 10px;">✅問題14</h4>
+       <p class="textbox">・今回はTypeScriptの keyof の問題です。<br><br>
+       ■要件<br>
+問1. type UserKey = keyof User; の UserKey は、どのような型になりますか？<br>
+問2. getUserValue('email') は、なぜエラーになるのでしょうか？<br>
+問3. このコードの実行結果として、console.log() のうち、どこまで正常に出力できるでしょうか？<br>
+
+
+</p>
+<pre class="code-block"><code>const user = {
+  name: 'Taro',
+  age: 25,
+  isAdmin: false,
+};
+
+type User = typeof user; //‼️typeof
+type UserKey = keyof User; //‼️key of
+
+function getUserValue(key: UserKey) {
+  return user[key];
+}
+
+export function run() {
+  console.log(getUserValue('name')); //Taro
+  console.log(getUserValue('age')); //25
+  console.log(getUserValue('isAdmin')); //false
+
+  // emailはエラー(型UserKeyに存在しないので)
+  console.log(getUserValue('email'));
+}
+
+
+//✅回答
+//問1. type UserKey = keyof User; の UserKey は、どのような型になりますか？
+A: UserKeyは、「type UserKey = keyof User;」なので『ユニオン型で name | age | isAdmin のプロパティ名3つが型になります。』
+
+//問2. getUserValue('email') は、なぜエラーになるのでしょうか？
+A: 「email」は【指定したkeyofのプロパティ名に存在しない】からエラーになる。
+
+//問3. このコードの実行結果として、console.log() のうち、どこまで正常に出力できるでしょうか？
+A:「Taro」「25」「false」の3つまで出力可能。
+
+
+</code></pre>
+
+
+      <button data-file="./ts/14_keyof.ts">コンソールで実行</button>
+       <p class="textbox">‼️型定義のチェックは実際のファイルを参照する</p>
       </div>
     </div>
 
